@@ -16,5 +16,5 @@ patches:
     kind: Deployment
     name: guestbook
 images:
-- digest: sha256:4a2a67f3bac6e7cd107a3d087085a9a19199f5ca428616d36c92605e36419076
+- digest: sha256:3d240d8d5465cb01d87e507b1a153130f7ad2100248dc8d0f0746808748858b7
   name: ghcr.io/dhpup/guestbook
