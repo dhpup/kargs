@@ -6,12 +6,15 @@ resources:
 - rollout.yaml
 
 patches:
-  - target:
-      kind: Deployment
-      name: guestbook
-    patch: |
-      $patch: delete
-      apiVersion: apps/v1
-      kind: Deployment
-      metadata:
-        name: DOES NOT MATTER
+- patch: |-
+    $patch: delete
+    apiVersion: apps/v1
+    kind: Deployment
+    metadata:
+      name: DOES NOT MATTER
+  target:
+    kind: Deployment
+    name: guestbook
+images:
+- digest: sha256:3d240d8d5465cb01d87e507b1a153130f7ad2100248dc8d0f0746808748858b7
+  name: ghcr.io/dhpup/guestbook
